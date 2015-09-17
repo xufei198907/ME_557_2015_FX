@@ -224,23 +224,23 @@ void createTriangleStripModel(void)
     vertices[114] = -1.0; vertices[115] = 2.0; vertices[116] = 1.0; // 39
     colors[114] = 0.0; colors[115] = 0.0; colors[116] = 1.0;
     
-    for (int i = 0; i < 117; i++)
-    {
-        switch (i%3)
-        {
-            case 0:
-                colors[i] = 0.0;
-                break;
-            case 1:
-                colors[i] = 0.0;
-                break;
-            case 2:
-                colors[i] = 0.8+0.2*i/176.0;
-                break;
-            default:
-                break;
-        }
-    }
+    // for (int i = 0; i < 117; i++)
+ //    {
+ //        switch (i%3)
+ //        {
+ //            case 0:
+ //                colors[i] = 0.0;
+ //                break;
+ //            case 1:
+ //                colors[i] = 0.0;
+ //                break;
+ //            case 2:
+ //                colors[i] = 0.8+0.2*i/176.0;
+ //                break;
+ //            default:
+ //                break;
+ //        }
+ //    }
 
     glGenVertexArrays(2, &vaoID[0]); // Create our Vertex Array Object
     glBindVertexArray(vaoID[0]); // Bind our Vertex Array Object so we can use it
@@ -284,71 +284,54 @@ void createMyModel(void)
     float* vertices = new float[243];  // Vertices for our square
     float *colors = new float[243]; // Colors for our vertices
     
-    for (int i = 0; i < 243; i++)
-    {
-        switch (i%3)
-        {
-            case 0:
-                colors[i] = 0.0;
-                break;
-            case 1:
-                colors[i] = 0.0;
-                break;
-            case 2:
-                colors[i] = 1.0;
-                break;
-            default:
-                break;
-        }
-    }
     
     vertices[0] = 0.0; vertices[1] = 0.0; vertices[2] = 0.0; //1 bottom
     vertices[3] = -3.0; vertices[4] = 0.0; vertices[5] = 0.0;
     vertices[6] = -1.0; vertices[7] = 0.0; vertices[8] = 1.0;
     
-    colors[2] = 0.5; colors[5] = 0.5; colors[8] = 0.5;
+    // colors[2] = 0.5; colors[5] = 0.5; colors[8] = 0.5;
     
     vertices[9] = -3.0; vertices[10] = 0.0; vertices[11] = 0.0; //2 bottom
     vertices[12] = -1.0; vertices[13] = 0.0; vertices[14] = 1.0;
     vertices[15] = -3.0; vertices[16] = 0.0; vertices[17] = 1.0;
     
-    colors[11] = 0.5; colors[14] = 0.5; colors[17] = 0.5;
+    // colors[11] = 0.5; colors[14] = 0.5; colors[17] = 0.5;
     
     vertices[18] = -3.0; vertices[19] = 0.0; vertices[20] = 1.0; //3 left
     vertices[21] = -3.0; vertices[22] = 1.0; vertices[23] = 0.0;
     vertices[24] = -3.0; vertices[25] = 1.0; vertices[26] = 1.0;
     
-    colors[20] = 0.7; colors[23] = 0.7; colors[26] = 0.7;
+    // colors[20] = 0.7; colors[23] = 0.7; colors[26] = 0.7;
     
     vertices[27] = -3.0; vertices[28] = 1.0; vertices[29] = 0.0; //4 left
     vertices[30] = -3.0; vertices[31] = 0.0; vertices[32] = 0.0;
     vertices[33] = -3.0; vertices[34] = 0.0; vertices[35] = 1.0;
     
-    colors[29] = 0.7; colors[32] = 0.7; colors[35] = 0.7;
+    // colors[29] = 0.7; colors[32] = 0.7; colors[35] = 0.7;
     
     vertices[36] = 0.0; vertices[37] = 0.0; vertices[38] = 0.0; //5  back
     vertices[39] = -3.0; vertices[40] = 0.0; vertices[41] = 0.0;
     vertices[42] = -1.0; vertices[43] = 1.0; vertices[44] = 0.0;
     
-    colors[38] = 0.65; colors[41] = 0.65; colors[44] = 0.65;
+    // colors[38] = 0.65; colors[41] = 0.65; colors[44] = 0.65;
     
     vertices[45] = -1.0; vertices[46] = 1.0; vertices[47] = 0.0; //6 back
     vertices[48] = -3.0; vertices[49] = 1.0; vertices[50] = 0.0;
     vertices[51] = -3.0; vertices[52] = 0.0; vertices[53] = 0.0;
     
-    colors[47] = 0.65; colors[50] = 0.65; colors[53] = 0.65;
+    // colors[47] = 0.65; colors[50] = 0.65; colors[53] = 0.65;
     
     vertices[54] = 0.0; vertices[55] = 0.0; vertices[56] = 0.0; //7 back
     vertices[57] = -1.0; vertices[58] = 1.0; vertices[59] = 0.0;
     vertices[60] = 0.0; vertices[61] = 2.0; vertices[62] = 0.0;
     
-    colors[56] = 0.65; colors[59] = 0.65; colors[62] = 0.65;
+    // colors[56] = 0.65; colors[59] = 0.65; colors[62] = 0.65;
     
     vertices[63] = -1.0; vertices[64] = 1.0; vertices[65] = 0.0; //8 back
     vertices[66] = -1.0; vertices[67] = 2.0; vertices[68] = 0.0;
     vertices[69] = -0.0; vertices[70] = 2.0; vertices[71] = 0.0;
     
-    colors[65] = 0.65; colors[68] = 0.65; colors[71] = 0.65;
+    // colors[65] = 0.65; colors[68] = 0.65; colors[71] = 0.65;
     
     vertices[72] = 0.0; vertices[73] = 0.0; vertices[74] = 0.0;  //9 right
     vertices[75] = 0.0; vertices[76] = 0.0; vertices[77] = 3.0;
@@ -366,99 +349,115 @@ void createMyModel(void)
     vertices[102] = -3.0; vertices[103] = 1.0; vertices[104] = 1.0;
     vertices[105] = -1.0; vertices[106] = 1.0; vertices[107] = 0.0;
     
-    colors[101] = 0.85; colors[104] = 0.85; colors[107] = 0.85;
+    // colors[101] = 0.85; colors[104] = 0.85; colors[107] = 0.85;
     
     vertices[108] = -1.0; vertices[109] = 1.0; vertices[110] = 0.0; //13 left top
     vertices[111] = -3.0; vertices[112] = 1.0; vertices[113] = 1.0;
     vertices[114] = -1.0; vertices[115] = 1.0; vertices[116] = 1.0;
     
-    colors[110] = 0.85; colors[113] = 0.85; colors[116] = 0.85;
+    // colors[110] = 0.85; colors[113] = 0.85; colors[116] = 0.85;
 
     vertices[117] = 0.0; vertices[118] = 0.0; vertices[119] = 0.0; //14 bottom
     vertices[120] = -1.0; vertices[121] = 0.0; vertices[122] = 1.0;
     vertices[123] = -1.0; vertices[124] = 0.0; vertices[125] = 3.0;
     
-    colors[119] = 0.5; colors[122] = 0.5; colors[125] = 0.5;
+    // colors[119] = 0.5; colors[122] = 0.5; colors[125] = 0.5;
     
     vertices[126] = 0.0; vertices[127] = 0.0; vertices[128] = 0.0; //15 bottom
     vertices[129] = -0.0; vertices[130] = 0.0; vertices[131] = 3.0;
     vertices[132] = -1.0; vertices[133] = 0.0; vertices[134] = 3.0;
     
-    colors[128] = 0.5; colors[131] = 0.5; colors[134] = 0.5;
+    // colors[128] = 0.5; colors[131] = 0.5; colors[134] = 0.5;
     
     vertices[135] = -3.0; vertices[136] = 0.0; vertices[137] = 1.0; //16 left front
     vertices[138] = -1.0; vertices[139] = 0.0; vertices[140] = 1.0;
     vertices[141] = -1.0; vertices[142] = 1.0; vertices[143] = 1.0;
     
-    colors[137] = 0.8; colors[140] = 0.8; colors[143] = 0.8;
+    // colors[137] = 0.8; colors[140] = 0.8; colors[143] = 0.8;
     
     vertices[144] = -3.0; vertices[145] = 1.0; vertices[146] = 1.0; //17 left front
     vertices[147] = -3.0; vertices[148] = 0.0; vertices[149] = 1.0;
     vertices[150] = -1.0; vertices[151] = 1.0; vertices[152] = 1.0;
     
-    colors[146] = 0.8; colors[149] = 0.8; colors[152] = 0.8;
+    // colors[146] = 0.8; colors[149] = 0.8; colors[152] = 0.8;
     
     vertices[153] = -1.0; vertices[154] = 2.0; vertices[155] = 0.0; //18 left 2
     vertices[156] = -1.0; vertices[157] = 2.0; vertices[158] = 1.0;
     vertices[159] = -1.0; vertices[160] = 1.0; vertices[161] = 0.0;
     
-    colors[155] = 0.7; colors[158] = 0.7; colors[161] = 0.7;
+    // colors[155] = 0.7; colors[158] = 0.7; colors[161] = 0.7;
     
     vertices[162] = -1.0; vertices[163] = 1.0; vertices[164] = 0.0; //19 left 2
     vertices[165] = -1.0; vertices[166] = 2.0; vertices[167] = 1.0;
     vertices[168] = -1.0; vertices[169] = 1.0; vertices[170] = 3.0;
     
-    colors[164] = 0.7; colors[167] = 0.7; colors[170] = 0.7;
+    // colors[164] = 0.7; colors[167] = 0.7; colors[170] = 0.7;
     
     vertices[171] = -1.0; vertices[172] = 1.0; vertices[173] = 1.0; //20 left 2
     vertices[174] = -1.0; vertices[175] = 0.0; vertices[176] = 1.0;
     vertices[177] = -1.0; vertices[178] = 0.0; vertices[179] = 3.0;
     
-    colors[173] = 0.7; colors[176] = 0.7; colors[179] = 0.7;
+    // colors[173] = 0.7; colors[176] = 0.7; colors[179] = 0.7;
     
     vertices[180] = -1.0; vertices[181] = 0.0; vertices[182] = 3.0; //21 left 2
     vertices[183] = -1.0; vertices[184] = 1.0; vertices[185] = 3.0;
     vertices[186] = -1.0; vertices[187] = 1.0; vertices[188] = 1.0;
     
-    colors[182] = 0.7; colors[185] = 0.7; colors[188] = 0.7;
+    // colors[182] = 0.7; colors[185] = 0.7; colors[188] = 0.7;
     
     vertices[189] = 0.0; vertices[190] = 2.0; vertices[191] = 0.0; //22 top
     vertices[192] = -1.0; vertices[193] = 2.0; vertices[194] = 0.0;
     vertices[195] = 0.0; vertices[196] = 2.0; vertices[197] = 1.0;
     
-    colors[191] = 0.85; colors[194] = 0.85; colors[197] = 0.85;
+    // colors[191] = 0.85; colors[194] = 0.85; colors[197] = 0.85;
     
     vertices[198] = -1.0; vertices[199] = 2.0; vertices[200] = 0.0; //23 top
     vertices[201] = -1.0; vertices[202] = 2.0; vertices[203] = 1.0;
     vertices[204] = 0.0; vertices[205] = 2.0; vertices[206] = 1.0;
     
-    colors[200] = 0.85; colors[203] = 0.85; colors[206] = 0.85;
+    // colors[200] = 0.85; colors[203] = 0.85; colors[206] = 0.85;
     
     vertices[207] = 0.0; vertices[208] = 2.0; vertices[209] = 1.0; //24 slope
     vertices[210] = -1.0; vertices[211] = 2.0; vertices[212] = 1.0;
     vertices[213] = 0.0; vertices[214] = 1.0; vertices[215] = 3.0;
     
-    colors[209] = 0.9; colors[212] = 0.9; colors[215] = 0.9;
+    // colors[209] = 0.9; colors[212] = 0.9; colors[215] = 0.9;
     
     vertices[216] = -1.0; vertices[217] = 2.0; vertices[218] = 1.0; //25 slope
     vertices[219] = 0.0; vertices[220] = 1.0; vertices[221] = 3.0;
     vertices[222] = -1.0; vertices[223] = 1.0; vertices[224] = 3.0;
     
-    colors[218] = 0.9; colors[221] = 0.9; colors[224] = 0.9;
+    // colors[218] = 0.9; colors[221] = 0.9; colors[224] = 0.9;
     
     vertices[225] = 0.0; vertices[226] = 1.0; vertices[227] = 3.0; //26 front
     vertices[228] = -1.0; vertices[229] = 1.0; vertices[230] = 3.0;
     vertices[231] = 0.0; vertices[232] = 0.0; vertices[233] = 3.0;
     
-    colors[227] = 0.95; colors[230] = 0.95; colors[233] = 0.95;
+    // colors[227] = 0.95; colors[230] = 0.95; colors[233] = 0.95;
     
     vertices[234] = -1.0; vertices[235] = 1.0; vertices[236] = 3.0; //27 front
     vertices[237] = -1.0; vertices[238] = 0.0; vertices[239] = 3.0;
     vertices[240] = 0.0; vertices[241] = 0.0; vertices[242] = 3.0;
     
-    colors[236] = 0.95; colors[239] = 0.95; colors[242] = 0.95;
+    // colors[236] = 0.95; colors[239] = 0.95; colors[242] = 0.95;
 
-    
+    for (int i = 0; i < 243; i++)
+    {
+        switch (i%3)
+        {
+            case 0:
+                colors[i] = 0.0;
+                break;
+            case 1:
+                colors[i] = 0.0;
+                break;
+            case 2:
+                colors[i] = 1.0;
+                break;
+            default:
+                break;
+        }
+    }
     
     
     glGenVertexArrays(2, &vaoID[1]); // Create our Vertex Array Object
