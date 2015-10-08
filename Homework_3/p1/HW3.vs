@@ -124,43 +124,6 @@ void main(void)
     float diffuse_coefficient1 = max( dot(transformedNormal, surface_to_light1), 0.0);
     vec3 out_diffuse_color1 = diffuse_color1  * diffuse_coefficient1 * diffuse_intensity1;
     
-    // Ambient color
-//    vec3 out_ambient_color1 = vec3(ambient_color1) * ambient_intensity1;
-//    
-//    // Specular color
-//    vec3 incidenceVector1 = -surface_to_light1.xyz;
-//    vec3 reflectionVector1 = reflect(incidenceVector1, transformedNormal.xyz);
-//    vec3 cameraPosition1 = vec3( -viewMatrixBox[3][0], -viewMatrixBox[3][1], -viewMatrixBox[3][2]);
-//    vec3 surfaceToCamera1 = normalize(cameraPosition1 - surfacePostion.xyz);
-//    float cosAngle1 = max( dot(surfaceToCamera1, reflectionVector1), 0.0);
-//    float specular_coefficient1 = pow(cosAngle1, shininess1);
-//    vec3 out_specular_color1 = specular_color1 * specular_coefficient1 * specular_intensity1;
-//    
-//    
-//    //attenuation
-//    float distanceToLight1 = length(light_position1.xyz - surfacePostion.xyz);
-//    float attenuation1 = 1.0 / (1.0 + attenuationCoefficient1 * pow(distanceToLight1, 2));
-//    
-//    
-//    //////////////////////////////////////////////////////////////////////////////////////////////
-//    // Spotlight
-//    // 1. Normalize the cone direction
-//    vec3 cone_direction_norm1 = normalize(cone_direction1);
-//    
-//    // 2. Calculate the ray direction. We already calculated the surface to light direction.
-//    // 	  All what we need to do is to inverse this value
-//    vec3 ray_direction1 = -surface_to_light1.xyz;
-//    
-//    // 3. Calculate the angle between light and surface using the dot product again.
-//    //    To simplify our understanding, we use the degrees
-//    float light_to_surface_angle1 = degrees(acos(dot(ray_direction1, cone_direction_norm1))) ;
-//    
-//    // 4. Last, we compare the angle with the current direction and
-//    //    reduce the attenuation to 0.0 if the light is outside the angle.
-//    if(light_to_surface_angle1 > cone_angle1){
-//        attenuation1 = 0.0;
-//    }
-    
     
     // Calculate the linear color: only diffuse
     vec3 linearColor1 = out_diffuse_color1;
